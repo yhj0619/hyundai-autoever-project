@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+.nanum-gothic-regular {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nanum-gothic-bold {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.nanum-gothic-extrabold {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.map_store {
+  background-image: url(./assets/images/ico_find_store.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.map_distance {
+  background-image: url(./assets/images/ico_location_direct.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.before_list li::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 0.8rem;
+  opacity: 0;
+  background: #000000;
+  border-radius: 0.8rem;
+  transform: translateY(-100%);
+  transition: opacity 400ms cubic-bezier(0.545, 0.015, 0.335, 1),
+    background 400ms cubic-bezier(0.545, 0.015, 0.335, 1),
+    transform 200ms cubic-bezier(0.38, 0.41, 0.27, 1);
+}
+
+.before_list li:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
